@@ -1,0 +1,5 @@
+/vendor/
+/.idea/
+node_modules/
+*.log
+test-results.xml
