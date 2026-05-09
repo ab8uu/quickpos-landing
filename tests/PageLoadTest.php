@@ -24,14 +24,14 @@ class PageLoadTest extends TestCase
         );
     }
 
-    public function testContactFileExists(): void
+    public function testProcessFileExists(): void
     {
         $this->assertFileExists(
-            $this->root . '/contact.php',
-            'contact.php must exist in project root'
+            $this->root . '/process.php',
+            'process.php must exist in project root'
         );
     }
-
+    
     public function testThankyouFileExists(): void
     {
         $this->assertFileExists(
@@ -52,14 +52,14 @@ class PageLoadTest extends TestCase
         );
     }
 
-    public function testContactPhpPassesSyntaxCheck(): void
+    public function testProcessPhpPassesSyntaxCheck(): void
     {
-        $file = $this->root . '/contact.php';
+        $file = $this->root . '/process.php';
         $output = shell_exec('php -l ' . escapeshellarg($file) . ' 2>&1');
         $this->assertStringContainsString(
             'No syntax errors detected',
             (string) $output,
-            'contact.php must pass PHP syntax check'
+            'process.php must pass PHP syntax check'
         );
     }
 
